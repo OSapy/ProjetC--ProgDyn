@@ -16,9 +16,9 @@ void tri_decroi(Sack array[], int size)
     {
         for (int j = i + 1; j < size; j++)
         {
-            if (array[i].valeur / array[i].place <= array[j].valeur / array[j].place)
+            if (array[i].valeur / array[i].poid <= array[j].valeur / array[j].poid)
             {
-                temp.place = array[i].place;
+                temp.poid = array[i].poid;
                 temp.valeur = array[i].valeur;
                 array[i] = array[j];
                 array[j] = temp;
@@ -32,20 +32,21 @@ void tri_decroi(Sack array[], int size)
  * 
  * @param array 
  * @param size 
- * @param placeMax 
+ * @param poidMax 
  * @return int 
  */
 
-int sac_glouton(Sack array[], int size, int placeMax)
+Sack *sac_glouton(Sack array[], int size, int poidMax)
 {
-    int total = 0;
+    Sack *sac = (Sack *)malloc(sizeof(Sack));
+    int poid_actuelle = 0;
     for (int i = 0; i < size; ++i)
     {
-        if (array[i].place <= placeMax)
+        if (array[i].poid + poid_actuelle <= poidMax)
         {
-            placeMax -= array[i].place;
-            total += array[i].valeur;
+            poid_actuelle += array[i].poid;
+            sac[i] = array[i];
         }
     }
-    return total;
+    return sac;
 }

@@ -1,8 +1,8 @@
 typedef struct
 {
     float valeur;
-    float place;
+    float poid;
 } Sack;
 
 void tri_decroi(Sack array[], int size);
-int sac_glouton(Sack array[], int size, int placeMax);
+Sack *sac_glouton(Sack array[], int size, int poidMax);

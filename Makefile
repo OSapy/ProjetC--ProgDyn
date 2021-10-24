@@ -89,3 +89,8 @@ clean:
 run: all
 	./$(OUTPUTMAIN)
 	@echo Executing 'run: all' complete!
+
+documentation:
+	@doxygen Doxyfile
+	firefox ./output/html/index.html
+	@echo Documentation generation complete !

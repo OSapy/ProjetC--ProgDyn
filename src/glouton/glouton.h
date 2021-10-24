@@ -1,3 +1,12 @@
+/**
+ * @file glouton.h
+ * @author Oscar SAPY
+ * @version 0.1
+ * @date 2021-10-24
+ * 
+ * @copyright Copyright (c) 2021
+ */
+
 typedef struct
 {
     float valeur;

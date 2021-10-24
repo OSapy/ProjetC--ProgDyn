@@ -1,14 +1,27 @@
+/**
+ * @file main.c
+ * @author Oscar SAPY
+ * @version 0.1
+ * @date 2021-10-24
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <stdio.h>
+#include <assert.h>
+#include <malloc.h>
 
 #include "dichotomy/dichotomy.h"
 #include "glouton/glouton.h"
+#include "pgsb/pgsb.h"
 
 int main()
 {
-	/* printf("Exercie 1 : \n");
+	printf("Exercie 1 : \n");
 	int table[] = {0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11}, taille = 12, result = 8;
 	int n = find_by_dichotomy(table, taille, result);
-	printf("%d\n\n", n); */
+	printf("%d\n\n", n);
 
 	printf("Exercie 2 : \n");
 
@@ -37,5 +50,12 @@ int main()
 	}
 	printf("il y a %d objet dans le sac \n", compteur);
 
-	printf("Exercie 3 : ");
+	printf("Exercie 3 : \n");
+
+	int SIZE = 12;
+	int **matrice = initMatrice(SIZE, 20);
+	affichageMatrice(matrice, SIZE);
+	printf("Affichage du carré: \n");
+	Coord coords = pgcb(matrice, SIZE);
+	newAffichageMatrice(matrice, SIZE, coords);
 }

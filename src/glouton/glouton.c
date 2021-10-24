@@ -1,3 +1,13 @@
+/**
+ * @file glouton.c
+ * @author Oscar SAPY
+ * @version 0.1
+ * @date 2021-10-24
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "glouton.h"
